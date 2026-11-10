@@ -16,7 +16,10 @@ app_license = "MIT"
 # app_include_css = "/assets/database_console/css/database_console.css"
 # app_include_js = "/assets/database_console/js/database_console.js"
 app_include_js = [
-		"/assets/database_console/desk.js"
+		# cache-busting query param: bump this whenever desk.js changes, since
+		# this path is served as-is (no content hash) and browsers/CDNs were
+		# caching the old, broken version indefinitely across deploys.
+		"/assets/database_console/desk.js?v=2"
 ]
 # include js, css files in header of web template
 # web_include_css = "/assets/database_console/css/database_console.css"
