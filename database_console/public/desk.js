@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", (event)=>{
   let extraHelBTN = () => {
     // Add knowledge base to help button
    let helpbtn = $('#toolbar-help')[0]
+   if (!helpbtn) return;
    let shringDB = document.createElement('a');
    shringDB.id="shringdb";
    shringDB.className = "dropdown-item";
